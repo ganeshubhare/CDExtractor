@@ -1,0 +1,36 @@
+2026-03-26 20:20:56,783 [INFO] Logging initialized. Writing to logs/cd2dap_etl.log
+2026-03-26 20:20:56,783 [INFO] ===== CD2 DAP ETL RUN STARTED =====
+2026-03-26 20:20:56,790 [INFO] Loaded 1 tables from tables.json
+2026-03-26 20:20:56,791 [INFO] --- Starting ETL for canvas.accounts ---
+2026-03-26 20:20:56,791 [INFO] Processing canvas.accounts
+2026-03-26 20:20:56,793 [INFO] connecting to cd2admin@wea-sql-ebs-02:1433/WeaCd2
+2026-03-26 20:20:59,758 [INFO] ('Microsoft SQL Server 2019 (RTM-CU32-GDR) (KB5077469) - 15.0.4460.4 (X64) \n\tFeb 13 2026 17:00:40 \n\tCopyright (C) 2019 Microsoft Corporation\n\tStandard Edition (64-bit) on Windows Server 2019 Standard 10.0 <X64> (Build 17763: ) (Hypervisor)\n',)
+2026-03-26 20:20:59,919 [INFO] explorer: extended column information available
+2026-03-26 20:21:00,155 [INFO] explorer: PK/FK information available
+2026-03-26 20:21:00,874 [INFO] Attempting initialization for canvas.accounts
+2026-03-26 20:21:00,874 [INFO] Running snapshot for canvas.accounts...
+2026-03-26 20:21:02,243 [INFO] Query started with job ID: a37fbb72-4ff4-4079-a1f1-ad64b637d369
+2026-03-26 20:21:02,243 [INFO] Query job still in status: waiting. Checking again in 5 seconds...
+2026-03-26 20:21:07,701 [INFO] Data has been successfully retrieved:
+{"id": "a37fbb72-4ff4-4079-a1f1-ad64b637d369", "status": "complete", "expires_at": "2026-03-27T20:21:01Z", "objects": [{"id": "a37fbb72-4ff4-4079-a1f1-ad64b637d369/part-00000-a5d8187e-ea18-46b9-8869-f6b2c6e5554e-c000.json.gz"}], "schema_version": 2, "at": "2026-03-26T20:14:21Z"}
+2026-03-26 20:21:08,252 [INFO] Downloaded: data\canvas\accounts\part-00000-a5d8187e-ea18-46b9-8869-f6b2c6e5554e-c000.json.gz
+2026-03-26 20:21:08,252 [INFO] Snapshot completed for canvas.accounts
+2026-03-26 20:21:08,254 [INFO] connecting to cd2admin@wea-sql-ebs-02:1433/WeaCd2
+2026-03-26 20:21:11,125 [INFO] ('Microsoft SQL Server 2019 (RTM-CU32-GDR) (KB5077469) - 15.0.4460.4 (X64) \n\tFeb 13 2026 17:00:40 \n\tCopyright (C) 2019 Microsoft Corporation\n\tStandard Edition (64-bit) on Windows Server 2019 Standard 10.0 <X64> (Build 17763: ) (Hypervisor)\n',)
+2026-03-26 20:21:11,185 [WARNING] The database collation Latin1_General_CI_AS does not appear to use UTF-8. Text fields may be incorrectly stored. Please consider using a UTF-8 collation, e.g. Latin1_General_100_CI_AS_SC_UTF8.
+2026-03-26 20:21:11,646 [INFO] explorer: extended column information available
+2026-03-26 20:21:11,883 [INFO] explorer: PK/FK information available
+2026-03-26 20:21:13,488 [INFO] Table already initialized — performing synchronize()
+2026-03-26 20:21:13,494 [INFO] connecting to cd2admin@wea-sql-ebs-02:1433/WeaCd2
+2026-03-26 20:21:13,537 [INFO] ('Microsoft SQL Server 2019 (RTM-CU32-GDR) (KB5077469) - 15.0.4460.4 (X64) \n\tFeb 13 2026 17:00:40 \n\tCopyright (C) 2019 Microsoft Corporation\n\tStandard Edition (64-bit) on Windows Server 2019 Standard 10.0 <X64> (Build 17763: ) (Hypervisor)\n',)
+2026-03-26 20:21:13,597 [WARNING] The database collation Latin1_General_CI_AS does not appear to use UTF-8. Text fields may be incorrectly stored. Please consider using a UTF-8 collation, e.g. Latin1_General_100_CI_AS_SC_UTF8.
+2026-03-26 20:21:14,069 [INFO] explorer: extended column information available
+2026-03-26 20:21:14,306 [INFO] explorer: PK/FK information available
+2026-03-26 20:21:16,255 [INFO] Query started with job ID: 05678525-338d-4615-8098-628e370e9cc0
+2026-03-26 20:21:16,255 [INFO] Query job still in status: waiting. Checking again in 5 seconds...
+2026-03-26 20:21:21,663 [INFO] Data has been successfully retrieved:
+{"id": "05678525-338d-4615-8098-628e370e9cc0", "status": "complete", "expires_at": "2026-03-27T20:21:15Z", "objects": [{"id": "05678525-338d-4615-8098-628e370e9cc0/part-00000-9f2a967e-6b2c-4428-96f7-9a81496e8b45-c000.tsv.gz"}], "schema_version": 2, "since": "2026-03-26T18:12:14Z", "until": "2026-03-26T20:14:21Z"}
+2026-03-26 20:21:22,058 [INFO] Upserted 0 records into table
+2026-03-26 20:21:22,359 [INFO] Synchronization completed for canvas.accounts
+2026-03-26 20:21:22,614 [INFO] \u2714 Completed canvas.accounts
+2026-03-26 20:21:22,614 [INFO] ===== CD2 DAP ETL RUN COMPLETE =====

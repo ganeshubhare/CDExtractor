@@ -1,0 +1,182 @@
+{
+    "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "object",
+        "properties": {
+            "meta": {
+                "type": "object",
+                "properties": {
+                    "ts": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "action": {
+                        "type": "string",
+                        "enum": [
+                            "U",
+                            "D"
+                        ],
+                        "title": "Identifies if a record is to be upserted (inserted or updated) or (hard) deleted."
+                    }
+                },
+                "additionalProperties": false,
+                "required": [
+                    "ts"
+                ],
+                "title": "Meta-information associated with the record."
+            },
+            "key": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "format": "int64",
+                        "description": "The ID of the user."
+                    }
+                },
+                "additionalProperties": false,
+                "required": [
+                    "id"
+                ],
+                "title": "This table stores attributes for users.",
+                "description": "Some users are from other Canvas instances (`id` column being > 10000000000000). Not all users are displayed in\nusers list on UI."
+            },
+            "value": {
+                "type": "object",
+                "properties": {
+                    "deleted_at": {
+                        "type": "string",
+                        "format": "date-time",
+                        "description": "Timestamp that shows when a user was deleted at."
+                    },
+                    "storage_quota": {
+                        "type": "integer",
+                        "format": "int64",
+                        "description": "The storage quota for the users."
+                    },
+                    "lti_context_id": {
+                        "type": "string",
+                        "maxLength": 255,
+                        "description": "UUID of the Canvas context in LTI standard. secondary ID for this context, could be used in API to identify resource as well."
+                    },
+                    "created_at": {
+                        "type": "string",
+                        "format": "date-time",
+                        "description": "Timestamp when the user was created in the Canvas system."
+                    },
+                    "updated_at": {
+                        "type": "string",
+                        "format": "date-time",
+                        "description": "Timestamp that shows the last time the record was updated."
+                    },
+                    "workflow_state": {
+                        "type": "string",
+                        "enum": [
+                            "__dap_unspecified__",
+                            "creation_pending",
+                            "deleted",
+                            "pending_approval",
+                            "pre_registered",
+                            "registered"
+                        ],
+                        "description": "Workflow status indicating the status of the user."
+                    },
+                    "sortable_name": {
+                        "type": "string",
+                        "maxLength": 255,
+                        "description": "The name of the user that is should be used for sorting groups of users, such as in the gradebook. Format: \"lastname, firstname\"."
+                    },
+                    "avatar_image_url": {
+                        "type": "string",
+                        "maxLength": 255,
+                        "description": "If avatars are enabled, this field will be included and contain a url to retrieve the user's avatar."
+                    },
+                    "avatar_image_source": {
+                        "type": "string",
+                        "maxLength": 255,
+                        "description": "The source of a user avatar image."
+                    },
+                    "avatar_image_updated_at": {
+                        "type": "string",
+                        "format": "date-time",
+                        "description": "Timestamp that shows the last time the avatar image was updated."
+                    },
+                    "short_name": {
+                        "type": "string",
+                        "maxLength": 255,
+                        "description": "A short name the user has selected, for use in conversations or other less formal places through the site."
+                    },
+                    "last_logged_out": {
+                        "type": "string",
+                        "format": "date-time",
+                        "description": "The last time the user explicitly logged out of Canvas."
+                    },
+                    "pronouns": {
+                        "oneOf": [
+                            {
+                                "type": "string",
+                                "const": "__dap_oversized_truncated__"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ],
+                        "description": "stores a list of preferred gender pronouns i.e.: she/her; he/him; they/them."
+                    },
+                    "merged_into_user_id": {
+                        "type": "integer",
+                        "format": "int64",
+                        "description": "If this user was merged into another one, this is the foreign key to that other user."
+                    },
+                    "locale": {
+                        "type": "string",
+                        "maxLength": 255,
+                        "description": "The user's locale. This is an optional field and may not be entered by the user."
+                    },
+                    "name": {
+                        "type": "string",
+                        "maxLength": 255,
+                        "description": "The name of the user (\"firstname lastname\" format)."
+                    },
+                    "time_zone": {
+                        "type": "string",
+                        "maxLength": 255,
+                        "description": "This field is only returned in certain API calls, and will return the IANA time zone name of the user's preferred timezone."
+                    },
+                    "uuid": {
+                        "type": "string",
+                        "maxLength": 255,
+                        "description": "UUID of the user."
+                    },
+                    "school_name": {
+                        "type": "string",
+                        "maxLength": 255,
+                        "description": "Used in Trial Versions of Canvas, the school the user is associated with."
+                    },
+                    "school_position": {
+                        "type": "string",
+                        "maxLength": 255,
+                        "description": "Used in Trial Versions of Canvas, the position the user has at the school. E.g. Admin"
+                    },
+                    "public": {
+                        "type": "boolean",
+                        "description": "Used in Trial Versions of Canvas, the type of school the user is associated with."
+                    }
+                },
+                "additionalProperties": false,
+                "required": [
+                    "created_at",
+                    "updated_at",
+                    "workflow_state"
+                ],
+                "title": "This table stores attributes for users.",
+                "description": "Some users are from other Canvas instances (`id` column being > 10000000000000). Not all users are displayed in\nusers list on UI."
+            }
+        },
+        "additionalProperties": false,
+        "required": [
+            "key"
+        ]
+    },
+    "version": 2
+}
