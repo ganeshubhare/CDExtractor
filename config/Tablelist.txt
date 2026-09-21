@@ -1,0 +1,224 @@
+{
+    "dataset": "canvas",
+    "table": "users"
+  },
+  {
+    "dataset": "canvas",
+    "table": "courses"
+  },
+  {
+    "dataset": "canvas",
+    "table": "master_courses_master_templates"
+  },
+  {
+    "dataset": "canvas",
+    "table": "master_courses_child_subscriptions"
+  },
+  {
+    "dataset": "canvas",
+    "table": "groups"
+  },
+  {
+    "dataset": "canvas",
+    "table": "roles"
+  },
+  {
+    "dataset": "canvas",
+    "table": "course_sections"
+  },
+  {
+    "dataset": "canvas",
+    "table": "enrollments"
+  },
+  {
+    "dataset": "canvas",
+    "table": "enrollment_terms"
+  },
+  {
+    "dataset": "canvas",
+    "table": "pseudonyms"
+  },
+  {
+    "dataset": "canvas",
+    "table": "assignments"
+  },
+  {
+    "dataset": "canvas",
+    "table": "assignment_groups"
+  },
+  {
+    "dataset": "canvas",
+    "table": "assignment_overrides"
+  },
+  {
+    "dataset": "canvas",
+    "table": "assignment_override_students"
+  },
+  {
+    "dataset": "canvas",
+    "table": "course_account_associations"
+  },
+  {
+    "dataset": "canvas",
+    "table": "context_external_tools"
+  },
+  {
+    "dataset": "canvas",
+    "table": "grading_periods"
+  },
+  {
+    "dataset": "canvas",
+    "table": "grading_period_groups"
+  },
+  {
+    "dataset": "canvas",
+    "table": "group_memberships"
+  },
+  {
+    "dataset": "canvas",
+    "table": "learning_outcomes"
+  },
+  {
+    "dataset": "canvas",
+    "table": "learning_outcome_groups"
+  },
+  {
+    "dataset": "canvas",
+    "table": "learning_outcome_question_results"
+  },
+  {
+    "dataset": "canvas",
+    "table": "learning_outcome_results"
+  },
+  {
+    "dataset": "canvas",
+    "table": "submissions"
+  },
+  {
+    "dataset": "canvas",
+    "table": "submission_comments"
+  },
+  {
+    "dataset": "canvas",
+    "table": "context_module_progressions"
+  },
+  {
+    "dataset": "canvas",
+    "table": "quizzes"
+  },
+  {
+    "dataset": "canvas",
+    "table": "quiz_questions"
+  },
+  {
+    "dataset": "canvas",
+    "table": "quiz_groups"
+  },
+  {
+    "dataset": "canvas",
+    "table": "quiz_submissions"
+  },
+  {
+    "dataset": "canvas",
+    "table": "wikis"
+  },
+  {
+    "dataset": "canvas",
+    "table": "communication_channels"
+  },
+  {
+    "dataset": "canvas",
+    "table": "attachments"
+  },
+  {
+    "dataset": "canvas",
+    "table": "attachment_associations"
+  },
+  {
+    "dataset": "canvas",
+    "table": "discussion_entries"
+  },
+  {
+    "dataset": "canvas",
+    "table": "discussion_topics"
+  },
+  {
+    "dataset": "canvas",
+    "table": "conversations"
+  },
+  {
+    "dataset": "canvas",
+    "table": "conversation_messages"
+  },
+  {
+    "dataset": "canvas",
+    "table": "context_modules"
+  },
+  {
+    "dataset": "canvas",
+    "table": "content_tags"
+  },
+  {
+    "dataset": "canvas",
+    "table": "web_conferences"
+  },
+  {
+    "dataset": "canvas",
+    "table": "web_conference_participants"
+  }
+
+
+
+DROP TABLE [canvas].[accounts];
+DROP TABLE [canvas].[assignments];
+DROP TABLE [canvas].[assignments__context_type];
+DROP TABLE [canvas].[assignments__grading_type];
+DROP TABLE [canvas].[assignments__submission_types];
+DROP TABLE [canvas].[submissions];
+DROP TABLE [canvas].[assignments__type];
+DROP TABLE [canvas].[submissions__media_comment_type];
+DROP TABLE [canvas].[submissions__submission_type];
+DROP TABLE [canvas].[assignment_groups];
+DROP TABLE [canvas].[submission_comments];
+DROP TABLE [canvas].[assignment_groups__context_type];
+DROP TABLE [canvas].[submission_comments__context_type];
+DROP TABLE [canvas].[submission_comments__media_comment_type];
+DROP TABLE [canvas].[assignment_overrides];
+DROP TABLE [canvas].[context_module_progressions];
+DROP TABLE [canvas].[assignment_overrides__set_type];
+DROP TABLE [canvas].[quizzes];
+DROP TABLE [canvas].[quizzes__context_type];
+DROP TABLE [canvas].[assignment_override_students];
+DROP TABLE [canvas].[quizzes__quiz_type];
+DROP TABLE [canvas].[course_account_associations];
+DROP TABLE [canvas].[users];
+DROP TABLE [canvas].[context_external_tools];
+DROP TABLE [canvas].[context_external_tools__context_type];
+DROP TABLE [canvas].[courses];
+DROP TABLE [canvas].[master_courses_master_templates];
+DROP TABLE [canvas].[grading_periods];
+DROP TABLE [canvas].[master_courses_child_subscriptions];
+DROP TABLE [canvas].[grading_period_groups];
+DROP TABLE [canvas].[course_sections];
+DROP TABLE [canvas].[enrollment_terms];
+DROP TABLE [canvas].[enrollments];
+DROP TABLE [canvas].[enrollments__type];
+DROP TABLE [canvas].[groups];
+DROP TABLE [canvas].[group_memberships];
+DROP TABLE [canvas].[groups__context_type];
+DROP TABLE [canvas].[groups__default_view];
+DROP TABLE [canvas].[learning_outcome_groups];
+DROP TABLE [canvas].[learning_outcome_groups__context_type];
+DROP TABLE [canvas].[learning_outcome_question_results];
+DROP TABLE [canvas].[learning_outcome_question_results__associated_asset_type];
+DROP TABLE [canvas].[learning_outcome_results];
+DROP TABLE [canvas].[learning_outcome_results__artifact_type];
+DROP TABLE [canvas].[learning_outcome_results__associated_asset_type];
+DROP TABLE [canvas].[learning_outcome_results__association_type];
+DROP TABLE [canvas].[learning_outcome_results__context_type]
+DROP TABLE [canvas].[learning_outcomes]
+DROP TABLE [canvas].[learning_outcomes__calculation_method]
+DROP TABLE [canvas].[learning_outcomes__context_type]
+DROP TABLE [canvas].[pseudonyms]
+DROP TABLE [canvas].[roles]
+DROP TABLE [canvas].[roles__base_role_type]
